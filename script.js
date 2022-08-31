@@ -44,9 +44,11 @@ let main =
             tempHTML.querySelector(".team").textContent = "Team: " + player.team.full_name;
         }
         let playerInfoClass = document.getElementsByClassName("player-info")[0];
-        playerInfoClass.classList.remove("invisible");
         playerInfoClass.innerHTML = "";
-        playerInfoClass.appendChild(tempHTML);
+        let playerInfo = document.createElement('div');
+        playerInfo.className="player-information";
+        playerInfo.appendChild(tempHTML);
+        playerInfoClass.appendChild(playerInfo);
         let playerId = player.id;
         this.getPlayerStats(playerId);
     },
@@ -109,7 +111,10 @@ let main =
             tempHTML.querySelector(".turnovers-per-game").textContent = "Turnovers Per Game: " + tpg;
         }
         let playerInfoClass = document.getElementsByClassName("player-info")[0];
-        playerInfoClass.appendChild(tempHTML);
+        let playerStats = document.createElement('div');
+        playerStats.className = "player-stats";
+        playerStats.appendChild(tempHTML);
+        playerInfoClass.appendChild(playerStats);
     },
 
     search: function()

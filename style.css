@@ -5,6 +5,10 @@ body
     font-size: 100%;
     margin: 0;
     padding: 0;
+    background-image: url(images/bball-court.jpeg);  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 section
@@ -15,8 +19,7 @@ section
 
 #home
 {
-    background-image: url(images/bball-court.jpeg);  
-    background-size: cover;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,7 +78,16 @@ button:hover
     cursor: pointer;
 }
 
-.player-info .invis
+#display-results
 {
-    visibility: hidden;
+    background: #000000d0;
+    color: white;
+}
+
+
+.player-info
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
