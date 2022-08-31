@@ -67,20 +67,47 @@ let main =
         let spg = player.stl;
         let bpg = player.blk;
         let threesPerGame = player.fg3m;
-        let fgp = player.fp_pct;
+        let fgp = player.fg_pct;
         let ftp = player.ft_pct;
         let tpg = player.turnover;
         let temp = document.getElementById("playerStatsTemplate").content;
         let tempHTML = document.importNode(temp, true);
-        tempHTML.querySelector(".points-per-game").textContent = ppg;
-        tempHTML.querySelector(".rebounds-per-game").textContent = rpg;
-        tempHTML.querySelector(".assists-per-game").textContent = apg;
-        tempHTML.querySelector(".steals-per-game").textContent = spg;
-        tempHTML.querySelector(".blocks-per-game").textContent = bpg;
-        tempHTML.querySelector(".threes-per-game").textContent = threesPerGame;
-        tempHTML.querySelector(".field-goal-percentage").textContent = fgp;
-        tempHTML.querySelector(".free-throw-percentage").textContent = ftp;
-        tempHTML.querySelector(".turnovers-per-game").textContent = tpg;
+        if(ppg != null)
+        {
+            tempHTML.querySelector(".points-per-game").textContent = "Points Per Game: " + ppg;
+        }
+        if(rpg != null)
+        {
+            tempHTML.querySelector(".rebounds-per-game").textContent = "Rebounds Per Game : " + rpg;
+        }
+        if(apg != null)
+        {
+            tempHTML.querySelector(".assists-per-game").textContent = "Assists Per Game: " + apg;
+        }
+        if(spg != null)
+        {
+            tempHTML.querySelector(".steals-per-game").textContent = "Steals Per Game: " + spg;
+        }
+        if(bpg != null)
+        {
+            tempHTML.querySelector(".blocks-per-game").textContent = "Blocks Per Game: " + bpg;
+        }
+        if(threesPerGame != null)
+        {
+            tempHTML.querySelector(".threes-per-game").textContent = "Threes Per Game: " + threesPerGame;
+        }
+        if(fgp != null)
+        {
+            tempHTML.querySelector(".field-goal-percentage").textContent = "Field Goal Percentage: " + fgp;
+        }
+        if(ftp != null)
+        {
+            tempHTML.querySelector(".free-throw-percentage").textContent = "Free Throw Percentage: " + ftp;
+        }
+        if(tpg != null)
+        {
+            tempHTML.querySelector(".turnovers-per-game").textContent = "Turnovers Per Game: " + tpg;
+        }
         let playerInfoClass = document.getElementsByClassName("player-info")[0];
         playerInfoClass.appendChild(tempHTML);
     },
