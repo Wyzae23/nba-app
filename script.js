@@ -136,9 +136,13 @@ let main =
     }
 };
 
+
+
+
 document.querySelector(".search button").addEventListener("click", function()
 {
     main.search();
+    document.getElementById("display-results").scrollIntoView({behavior: "smooth"});
 });
 
 /*
