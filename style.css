@@ -1,4 +1,3 @@
-
 body
 {
     font-family: sans-serif;
@@ -9,6 +8,11 @@ body
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+html, body
+{
+    height:  -webkit-fill-available;
 }
 
 section
@@ -42,7 +46,6 @@ section
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 button
